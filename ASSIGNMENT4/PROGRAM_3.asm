@@ -1,0 +1,24 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+RD1 DB 0
+RD2 DB 0
+RD3 DB 0
+SUM DW 0 ;;SUM WILL BE GREATER THAN 255 SO,
+.CODE
+
+MOV DX,@DATA
+MOV DS,DX
+
+    MOV CX,20
+    MOV BX,40
+    L1:
+        ADD SUM,BX
+        
+        INC BX
+        
+        LOOP L1
+        
+        ;;SUM IS IN "SUM"
+        ;; QUESTION SAID CALCULATOR AND STORE 
+        ;; SO I DONT HAVE TO DISPLAY IT
